@@ -9,7 +9,7 @@ redux-logger
 redux-thunk
 axios`
 
-GH Pages link: https://mtlynch3.github.io/astro-redux/
+### [Deployed site](https://mtlynch3.github.io/astro-redux/)
 
 Note: nothing is displayed to the site due to mixed content error (the API endpoint is not secure). Mixed content error occurs when initial HTML (the gh pages site) is loaded over a secure HTTPS connection, but other resources (such as data from an API) are loaded over an insecure HTTP connection.
 
