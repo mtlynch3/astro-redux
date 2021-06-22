@@ -3,8 +3,6 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getAstronautsThunk } from './store/getAstronauts'
 
-
-
 class App extends Component {
 
   componentDidMount() {
@@ -18,9 +16,10 @@ class App extends Component {
     let astros = this.props.astronauts;
     return(
       <div style={{margin: '10px'}}>
-        {astros.map( (astro) => {
+        <h3>Astronauts currently in space:</h3>
+        {astros.map( (astro, index) => {
           return (
-            <li key={astro.name}>
+            <li key={index}>
              {astro.name}
              </li>
           )}) 
