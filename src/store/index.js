@@ -1,7 +1,6 @@
 import { applyMiddleware, createStore } from 'redux';
 import { createLogger } from 'redux-logger';
 import thunkMiddleware from 'redux-thunk';
-import { composeWithDevTools } from 'redux-devtools-extension';
 
 // will normally be importing several reducers 
 // and need to combine them using combineReducers;
@@ -9,7 +8,7 @@ import { reducer } from './getAstronauts';
 
 // Construct our Redux store;
 const logger = createLogger({ collapsed: true });
-const middleware = composeWithDevTools(applyMiddleware(thunkMiddleware, logger));
+const middleware = applyMiddleware(thunkMiddleware, logger);
 
 const store = createStore(reducer, middleware);
 
